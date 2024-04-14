@@ -1,0 +1,31 @@
+/* components/Typewriter.module.css */
+@use '../../components/utils/theme'
+
+.typewriter 
+    font-family: 'Courier New', Courier, monospace
+    font-size: 32px
+    // white-space: nowrap
+    overflow: hidden
+    overflow-wrap: anywhere 
+    // border-right: 2px solid
+    width: fit-content
+    font-weight: bold
+    // color: theme.$bgColor
+    background: theme.$bgColor
+    display: flex
+    justify-content: center
+    text-align: center
+    -webkit-text-fill-color: transparent
+    -webkit-background-clip: text
+    
+
+// .cursor
+//     animation: blinkCursor 3s steps(1) infinite
+
+
+// @keyframes blinkCursor 
+//     from, to 
+//         border-color: transparent 
+//     50% 
+//         // border-color: black 
+

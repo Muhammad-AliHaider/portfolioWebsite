@@ -1,0 +1,79 @@
+@use '../../components/utils/theme'
+    
+.Container
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 70vh
+    width: 400px
+    border-radius: 10% 10% 0% 0%
+    transition: 0.5s
+    &:hover
+        transform: scale(1.05)
+
+
+.picture
+    width: 400px
+    height: 400px
+    border-radius: 10% 10% 0% 0%
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4)
+    margin-bottom: 20px
+    background: theme.$color_tertiary
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 50px
+    color: theme.$color_primary
+    font-weight: bold
+    object-fit: cover
+    
+
+
+.TextContainer
+    display: flex
+    background-color: theme.$sidebarBg
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    width: 400px
+    height: 100%
+    border-radius: 0% 0% 10% 10%
+    // margin-bottom: 20px
+    color: theme.$text_primary
+    font-size: 24px
+    z-index: 25
+    margin-top: -20px
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4)
+    transition: 0.5s
+    
+    &:hover
+        translate: 0px -40px
+
+.convertToColumn
+    display: flex
+    flex-direction: column
+
+
+.typewriterDiv
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+
+.socialMediaContainer
+    display: flex
+    justify-content: center
+    gap: 2px
+    width: 100%
+    margin-top: 20px
+    font-size: 24px
+    color: theme.$text_primary
+    a
+        color: theme.$text_primary
+        text-decoration: none
+        transition: 0.5s
+        &:hover
+            color: theme.$color_primary
+    

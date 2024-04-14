@@ -1,0 +1,119 @@
+/* components/Sidebar.module.css */
+
+@use '../utils/theme'
+
+
+
+
+.sidebar
+    width: 250px
+    height: 70vh
+    background: theme.$sidebarBg
+    justify-content: flex-start
+    display: flex
+    flex-direction: column
+    // align-items: center 
+    padding: 10px
+    border-radius: 0 20px 20px 0
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4)
+    overflow-x: hidden
+    overflow-y: auto
+    position: fixed
+    left: 0
+
+.logo 
+    width: 175px
+    height: 175px
+    display: flex
+    justify-content: center
+    align-items: center
+    // margin-bottom: 20px
+
+.gradientDivider
+    // content: ''
+    // font-size: 20px
+    height: 2px
+    margin: 10px 0px
+    border-radius: 250px
+    background: theme.$gradientDivider
+    // font-weight: bold
+
+.divider
+    height: 0.5px
+    margin: 10px 0px
+    border-radius: 250px
+    background-color: #e4e4e4
+
+
+
+.navList 
+    width: 90%
+    list-style: none
+    margin: 0
+    padding: 0
+
+
+.navList li 
+    padding: 10px
+    /* width: 90% */
+    cursor: pointer
+    border-radius: 10px
+    margin-bottom: 10px
+    // background-color: theme.$color_tertiary
+    transition: background-color 0.3s
+    color: theme.$text_primary
+
+
+.navList li::before
+    content: ''
+    display: inline-block
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    margin-right: 10px
+    background-color: theme.$color_tertiary
+
+
+
+
+.navList li:hover
+    background-color: theme.$color_secondary
+    
+.navList li.active 
+    background-color: theme.$color_primary
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4)
+
+.ContactBlock
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-direction: column
+    margin: 0px 10px
+
+
+.ContentHeading
+    font-size: 20px
+    font-weight: bold
+    margin-bottom: 10px
+    color: theme.$text_heading
+
+.ContentSubHeading
+    font-size: 12px
+    // font-weight: bold
+    // margin: 10px 10px
+    color: theme.$text_primary
+    display: flex
+    overflow-wrap: anywhere
+    flex-direction: column
+    width: 100%
+
+.Copyright
+    font-size: 8px
+    color: theme.$text_primary
+    margin-top: 20px
+    display: flex
+    color: #7c7c7c
+
+    
+    // overflow-wrap: normal
+
