@@ -6,15 +6,22 @@
     justify-content: center
     align-items: center
     height: 70vh
-    width: 400px
+    width: 25%
+    margin-left: 300px
     border-radius: 10% 10% 0% 0%
     transition: 0.5s
     &:hover
         transform: scale(1.05)
 
+@media(min-width: 1441px)
+    .Container
+        width: 25%
+        margin-left: 0px
+        border-radius: 0% 0% 0% 0%
+
 
 .picture
-    width: 400px
+    width: 100%
     height: 400px
     border-radius: 10% 10% 0% 0%
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.4)
@@ -36,19 +43,34 @@
     flex-direction: column
     justify-content: space-around
     align-items: center
-    width: 400px
+    width: 100%
     height: 100%
     border-radius: 0% 0% 10% 10%
     // margin-bottom: 20px
     color: theme.$text_primary
     font-size: 24px
-    z-index: 25
+    //z-index: 1
     margin-top: -20px
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.4)
     transition: 0.5s
     
     &:hover
         translate: 0px -40px
+        
+
+
+
+.TextContainerHover
+    width: 100%
+    height: 100%
+    
+    
+    &:hover
+        .ResumeDownload
+            z-index: 2
+            opacity: 1
+            display: flex
+            margin-top: 20px
 
 .convertToColumn
     display: flex
@@ -76,4 +98,35 @@
         transition: 0.5s
         &:hover
             color: theme.$color_primary
+    
+
+.ResumeDownload
+    display: flex
+    opacity: 0
+    justify-content: center
+    align-items: center
+    gap: 4px
+    width: 100%
+    height: 50px
+    background: #ffffff
+    color: theme.$text_primary
+    font-size: 24px
+    font-weight: bold
+    border-radius: 10px
+    margin-top: -20px
+    z-index: -1000
+    transition: 0.5s
+    &:hover
+        background: #ffffff
+        color: theme.$color_secondary
+        transform: scale(1.05)
+        cursor: pointer
+    // a
+    //     color: theme.$text_primary
+    //     text-decoration: none
+    //     transition: 0.5s
+    //     &:hover
+    //         color: theme.$color_primary
+    //         text-decoration: none
+    //         transition: 0.5s
     

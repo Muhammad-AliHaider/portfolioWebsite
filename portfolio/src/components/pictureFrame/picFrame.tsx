@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { IoDownload } from "react-icons/io5";
 import React from 'react';
 import Typewriter from './typewriter';
 import cn from 'classnames';
@@ -11,6 +12,7 @@ export default function PicFrame() {
     return (
         <div className= {cn(styles.Container)}>
             <Image src={pic} alt="PicFrame" className={cn(styles.picture)}/>
+            <div className={cn(styles.TextContainerHover)}>
             <div className={cn(styles.TextContainer)}> 
                 <div className = {cn(styles.typewriterDiv)}>
                     <span>I'm</span>
@@ -28,6 +30,11 @@ export default function PicFrame() {
                         </a>
                     </div>
                 </div>
+            </div>
+            <div className={cn(styles.ResumeDownload)}>
+                <IoDownload />
+                <a href="/Resume_Ali_Haider.pdf" download={"ResumeAliHaider.pdf"} className={cn(styles.DownloadButton)}>Download Resume</a>
+            </div>
             </div>
             
 

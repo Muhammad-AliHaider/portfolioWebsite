@@ -1,0 +1,47 @@
+
+
+
+
+
+$animationSpeed : 40s
+
+
+@keyframes scroll
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(calc(-10rem * 6))
+
+
+
+// Styling
+
+.spacer1
+    padding-bottom: 0.5rem
+    
+
+
+.slider 
+    background: rgba(0, 0, 0, 0)
+    height: 4.5rem
+    // margin: auto
+    overflow: hidden
+    position: relative
+    width: 100%
+
+
+
+.slideTrack 
+    animation: scroll $animationSpeed linear infinite
+    display: flex
+    width: calc(10rem * 12)
+
+
+.slide 
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 4.5rem
+    width: 10rem
+
+

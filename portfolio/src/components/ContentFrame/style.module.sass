@@ -1,16 +1,172 @@
 @use '../utils/theme'
 
+
+
+//   box-shadow: inset 0 0 5px grey
+
+
 .contentFrame
-    width: 800px
+    width: 65%
     height: 70vh
     background: theme.$bgColor
     display: flex
-    justify-content: center
-    align-items: center
-    border-radius: 10%
+    justify-content: flex-start
+    align-items: flex-start
+    border-radius: 5%
+    // padding: 3rem
     // gap: 8rem
     background: theme.$sidebarBg
-    padding: 0 2rem
+    padding: 3rem
+    
+
+@keyframes fadeIn 
+  from 
+    opacity: 0
+  
+  to 
+    opacity: 1
+  
+
+
+@mixin animation-fadeIn($duration: 1s, $ease: ease-out, $delay: 0s, $fill-mode: forwards) 
+  animation-name: fadeIn
+  animation-duration: $duration
+  animation-timing-function: $ease
+  animation-delay: $delay
+  animation-fill-mode: $fill-mode
+
+
+.content
+    display: flex
+    flex-direction: column
+    // justify-content: center
+    align-items: flex-start
+    width: 100%
+    height: 565px
+    // height: max-content
     overflow-x: hidden
     overflow-y: auto
+    
+
+.contentHeading
+    font-size: 2.5rem
+    font-family: 'Roboto', sans-serif
+    color: theme.$text_gradient
+    text-transform: uppercase
+    margin-bottom: 2rem
+    @include animation-fadeIn(1s, ease-out)
+
+.contentText
+    width: 100%
+    font-size: 1.25rem
+    font-family: 'Roboto', sans-serif
+    color: theme.$text_heading
+    // margin-bottom: 2rem
+
+.gradientDivider
+    height: 4px
+    width: 100%
+    margin: 10px 0px
+    border-radius: 250px
+    background: theme.$gradientDivider
+    // position: relative
+
+
+.convertToRow
+    display: flex
+    flex-direction: row
+    //justify-content: space-between
+    align-items: center
+    width: 100%
+    justify-content: center
+    //height: 100%
+    gap: 2rem
+    @include animation-fadeIn(1s, ease-out)
+
+.convertToColumn
+    display: flex
+    flex-direction: column
+    //justify-content: space-between
+    align-items: flex-start
+    width: 100%
+    justify-content: center
+    //height: 100%
+    gap: 2rem
+    margin-top: 2rem
+    @include animation-fadeIn(1s, ease-out)
+
+.panesv1
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: inherit
+    gap: 1rem
+    overflow-y: auto
+    overflow-x: hidden
+    @include animation-fadeIn(1s, ease-out)
+
+
+
+.panes
+    display: flex
+    width: 100%
+    height: inherit
+    gap: 2rem
+    overflow-y: auto
+    overflow-x: hidden
+    @include animation-fadeIn(1s, ease-out)
+
+
+
+
+.panes::-webkit-scrollbar, .panesv1::-webkit-scrollbar
+  width: 4px
+  height: 10px
+  margin-left: -12px
+
+
+.panes::-webkit-scrollbar-thumb, .panesv1::-webkit-scrollbar-thumb 
+  background: theme.$gradientDivider
+  border-radius: 10px
+//   border: 3px solid orange
+
+
+.panes::-webkit-scrollbar-track, .panesv1::-webkit-scrollbar-track 
+  background: #f1f1f1
+  border-radius: 10px
+
+
+.paddingTop
+    padding-top: 2rem
+
+
+
+.leftPane
+    width: 45%
+    // position: relative
+    display: flex
+    flex-direction: column
+    // justify-content: center
+    // align-items: center
+    // overflow: scroll
+
+.rightPane
+    width: 45%
+    // height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+
+
+
+
+.Animation 
+    overflow: hidden
+    height: 100%px
+    // overflow: hidden
+    @include animation-fadeIn(1s, ease-out)
+
+
     

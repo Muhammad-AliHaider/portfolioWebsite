@@ -1,0 +1,49 @@
+/* Tile.module.css */
+
+@use '../utils/theme'
+
+.tileContainer 
+    display: flex
+    align-items: center
+    height: min-content
+    cursor: pointer
+    padding: 10px
+    width: 300px
+    border: 1px solid #ccc
+    border-radius: 8px
+    // margin: 10px
+    transition: background-color 0.3s ease
+
+
+
+.tileContainer:hover 
+    background-color: theme.$color_primary
+    border-radius: 8px
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1)
+
+
+.tileImage 
+    width: 50px
+    // height: min-content
+    margin-right: 20px
+    // object-fit: cover
+    border-radius: 4px
+
+
+.tileTextContainer 
+    display: flex
+    flex-direction: column
+
+
+.tileTitle 
+    margin: 0
+    font-size: 16px
+    color: #333
+    font-weight: bold
+
+
+
+.tileSubtitle 
+    font-size: 14px
+    color: #666
+

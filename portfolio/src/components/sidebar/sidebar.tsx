@@ -8,8 +8,13 @@ import cn from "classnames";
 import logo from './assets/logo.png';
 import styles from './style.module.sass';
 
-const Sidebar: React.FC = () => {
-    const [activeTab, setActiveTab] = useState('tab1');
+export interface SidebarProps {
+    activeTab: string;
+    setActiveTab: (tab: string) => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({activeTab , setActiveTab}) => {
+    // const [activeTab, setActiveTab] = useState('tab1');
 
     const tabs : SidebarTabsProps[] = [
         {name: 'Introduction', activeTab: 'tab1'},
@@ -24,7 +29,10 @@ const Sidebar: React.FC = () => {
 
     return (
         <div className={styles.sidebar}>
+            <div className= {styles.logoContainer}>
             <Image src={logo} alt="Logo"  className={cn(styles.logo)} />
+            </div>
+            
             <div className = {cn(styles.gradientDivider)}/>
             <ul className={styles.navList}>
                 {
