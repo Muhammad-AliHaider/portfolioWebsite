@@ -256,7 +256,7 @@ const ContentFrame: React.FC<ContentFrameProps> = ({ tabActive = 'tab1' }) => {
                 <div className={cn(styles.panes)}>
                     <div className={cn(styles.leftPane)}>
                         <span className={cn(styles.contentText)}>
-                            Welcome to the digital playground of a passionate technologist. From a young age, I've been mesmerized by the potential of technology to turn dreams into reality, a passion that has only grown as I pursued my Computer Science degree at the <b>Institute of Business Administration</b>, maintaining a CGPA of <b>3.74</b>. My journey through the tech landscape is driven by a relentless quest for knowledge and a dedication to solving complex challenges. Here, you'll discover a portfolio enriched by diverse projects across <b>JavaScript, Java, React, Next.js, Flutter, Node.js and python </b>—each a testament to my commitment to not just mastering code but creating meaningful, resonant experiences. Join me in pushing the boundaries of what's possible, as we innovate and inspire together to build the future.
+                            Welcome to the digital playground of a passionate technologist. From a young age, I&apos;ve been mesmerized by the potential of technology to turn dreams into reality, a passion that has only grown as I pursued my Computer Science degree at the <b>Institute of Business Administration</b>, maintaining a CGPA of <b>3.74</b>. My journey through the tech landscape is driven by a relentless quest for knowledge and a dedication to solving complex challenges. Here, you&apos;ll discover a portfolio enriched by diverse projects across <b>JavaScript, Java, React, Next.js, Flutter, Node.js and python </b>—each a testament to my commitment to not just mastering code but creating meaningful, resonant experiences. Join me in pushing the boundaries of what&apos;s possible, as we innovate and inspire together to build the future.
                         </span>
                     </div>
                     <div className={cn(styles.rightPane)}>
@@ -302,7 +302,7 @@ const ContentFrame: React.FC<ContentFrameProps> = ({ tabActive = 'tab1' }) => {
                     <div className={cn(styles.convertToRow)}>
                         <div>
                             <span className={cn(styles.contentText)}>
-                                Welcome to my Professional Experience section! Here, you'll explore key projects and roles that have honed my skills and shaped my career in technology. I invite you to see how my journey aligns with your goals as we look towards future collaborations and achievements.
+                                Welcome to my Professional Experience section! Here, you&apos;ll explore key projects and roles that have honed my skills and shaped my career in technology. I invite you to see how my journey aligns with your goals as we look towards future collaborations and achievements.
                             </span>
                         </div>
                         <div>
@@ -327,7 +327,7 @@ const ContentFrame: React.FC<ContentFrameProps> = ({ tabActive = 'tab1' }) => {
                     {
                         data.map((tile, index) => {
                             return (
-                                <ArticleModal imageUrl={tile.imageUrl} title={tile.title} description={tile.subtitle} isOpen={isOpen === tile.id} onClose={closeModal} jsonUrl={tile.jsonUrl} points={tile.points} demoChild={tile.demoChild ?? null} />
+                                <ArticleModal key={index} imageUrl={tile.imageUrl} title={tile.title} description={tile.subtitle} isOpen={isOpen === tile.id} onClose={closeModal} jsonUrl={tile.jsonUrl} points={tile.points} demoChild={tile.demoChild ?? null} />
 
                             )
                         })
@@ -405,7 +405,7 @@ const ContentFrame: React.FC<ContentFrameProps> = ({ tabActive = 'tab1' }) => {
                         dataProjects.map((tile, index) => {
                             return (
                                 // <div key={index}>
-                                <ArticleModal imageUrl={tile.imageUrl} title={tile.title} description={tile.subtitle} isOpen={isOpen === tile.id} onClose={closeModal} jsonUrl={tile.jsonUrl} points={tile.points} demoChild={tile.demoChild ?? null} />
+                                <ArticleModal key={index} imageUrl={tile.imageUrl} title={tile.title} description={tile.subtitle} isOpen={isOpen === tile.id} onClose={closeModal} jsonUrl={tile.jsonUrl} points={tile.points} demoChild={tile.demoChild ?? null} />
                                 // </div>
                             )
                         })
@@ -438,7 +438,7 @@ const ContentFrame: React.FC<ContentFrameProps> = ({ tabActive = 'tab1' }) => {
                 <div className={cn(styles.convertToRow)}>
                     <div>
                         <span className={cn(styles.contentText)}>
-                            Welcome to the Education section of my portfolio! Here, you’ll discover the academic journey that has shaped my expertise and fueled my passion for technology. From rigorous coursework to hands-on projects, each educational experience has contributed to my professional growth. Dive in to see how my academic achievements and the knowledge I've gained form the foundation of my technical skills and professional capabilities.
+                            Welcome to the Education section of my portfolio! Here, you&apos;ll discover the academic journey that has shaped my expertise and fueled my passion for technology. From rigorous coursework to hands-on projects, each educational experience has contributed to my professional growth. Dive in to see how my academic achievements and the knowledge I&apos;ve gained form the foundation of my technical skills and professional capabilities.
                         </span>
                     </div>
                     <div>

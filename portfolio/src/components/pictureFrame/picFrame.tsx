@@ -15,7 +15,7 @@ export default function PicFrame() {
             <div className={cn(styles.TextContainerHover)}>
             <div className={cn(styles.TextContainer)}> 
                 <div className = {cn(styles.typewriterDiv)}>
-                    <span>I'm</span>
+                    <span>I&apos;m</span>
                     <Typewriter/>
                 </div>
                 <div className={cn(styles.convertToColumn)}>

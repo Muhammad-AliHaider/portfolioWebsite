@@ -12,13 +12,13 @@ const Carousel : React.FC<CarouselProps> = ({ imagesarray }) => {
         
           <div className={cn(style.slider)}>
             <div className={cn(style.slideTrack)}>
-              {imagesarray.map((partner) => (
-                <div className={cn(style.slide)}>
+              {imagesarray.map((partner, index) => (
+                <div className={cn(style.slide)} key={index}>
                   <Image src={partner} alt={""} width={85} height={72}/>
                 </div>
               ))}
-              {imagesarray.map((partner) => (
-                <div className={cn(style.slide)}>
+              {imagesarray.map((partner, index) => (
+                <div className={cn(style.slide)} key={index}>
                   <Image src={partner} alt={""} width={85} height={72} />
                 </div>
               ))}
